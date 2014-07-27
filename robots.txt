@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://martinscosta.github.io/sitemap.xml 
+Sitemap: http://gh.martinscosta.org/sitemap.xml 
