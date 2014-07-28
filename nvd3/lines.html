@@ -51,6 +51,10 @@
                     
                 
                     
+                    <li><a href="/react/hello/"></a>
+                    
+                
+                    
                 
                     
                 
@@ -60,6 +64,10 @@
                 
                     
                     <li><a href="/nvd3/lines.html"></a>
+                    
+                
+                    
+                    <li><a href="/react_apps/">ReactJs</a>
                     
                 
                     
@@ -112,7 +120,7 @@
         </div>
         <script src='/downloads/code/line.js' type='text/javascript'> </script>
 
-        <figure class='code'><figcaption><span> (line.js)</span> <a href='/downloads/code/line.js'>download</a></figcaption>
+      <figure class='code'><figcaption><span> (line.js)</span> <a href='/downloads/code/line.js'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -177,6 +185,22 @@
 <span class='line-number'>62</span>
 <span class='line-number'>63</span>
 <span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="cm">/*These lines are all chart setup.  Pick and choose which chart features you want to utilize. */</span>
 </span><span class='line'><span class="nx">nv</span><span class="p">.</span><span class="nx">addGraph</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="nx">nv</span><span class="p">.</span><span class="nx">models</span><span class="p">.</span><span class="nx">lineChart</span><span class="p">()</span>
@@ -197,7 +221,8 @@
 </span><span class='line'>      <span class="p">.</span><span class="nx">tickFormat</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="s1">&#39;.02f&#39;</span><span class="p">));</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="cm">/* Done setting the chart up? Time to render it!*/</span>
-</span><span class='line'>  <span class="kd">var</span> <span class="nx">myData</span> <span class="o">=</span> <span class="nx">sinAndCos</span><span class="p">();</span>   <span class="c1">//You need data...</span>
+</span><span class='line'>  <span class="c1">//var myData = sinAndCos();   //You need data...</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">myData</span> <span class="o">=</span> <span class="nx">dados</span><span class="p">();</span>   <span class="c1">//You need data...</span>
 </span><span class='line'>
 </span><span class='line'>  <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#chart svg&#39;</span><span class="p">)</span>    <span class="c1">//Select the &lt;svg&gt; element you want to render the chart in.   </span>
 </span><span class='line'>      <span class="p">.</span><span class="nx">datum</span><span class="p">(</span><span class="nx">myData</span><span class="p">)</span>         <span class="c1">//Populate the &lt;svg&gt; element with chart data...</span>
@@ -240,6 +265,21 @@
 </span><span class='line'>      <span class="nx">area</span><span class="o">:</span> <span class="kc">true</span>      <span class="c1">//area - set to true if you want this line to turn into a filled area chart.</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>  <span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="kd">function</span> <span class="nx">dados</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">[</span>
+</span><span class='line'>     <span class="p">{</span>
+</span><span class='line'>        <span class="nx">values</span> <span class="o">:</span> <span class="p">[</span>
+</span><span class='line'>            <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1990</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">50</span><span class="p">},</span>
+</span><span class='line'>            <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1991</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">40</span><span class="p">},</span>
+</span><span class='line'>            <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1992</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">46</span><span class="p">},</span>
+</span><span class='line'>            <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1993</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">23</span><span class="p">},</span>
+</span><span class='line'>            <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mi">1994</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">70</span><span class="p">}</span>
+</span><span class='line'>        <span class="p">],</span>
+</span><span class='line'>        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;Inflação&quot;</span><span class="p">,</span>
+</span><span class='line'>        <span class="nx">color</span><span class="o">:</span> <span class="s2">&quot;brown&quot;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="p">]</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
     </div>
