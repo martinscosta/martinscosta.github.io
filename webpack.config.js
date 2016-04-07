@@ -10,7 +10,7 @@ const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
   app: path.join(__dirname, 'app'),
   root: __dirname,
-  build: path.join(__dirname, 'build')
+  build: path.join(__dirname, 'static')
 };
 
 
