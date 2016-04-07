@@ -1,0 +1,19 @@
+{
+  "name": "martinscosta.github.io",
+  "version": "0.0.3",
+  "description": "Marco Martins Costa - Github Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinscosta/martinscosta.github.io.git"
+  },
+  "author": "Marco Martins Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinscosta/martinscosta.github.io/issues"
+  },
+  "homepage": "https://github.com/martinscosta/martinscosta.github.io#readme"
+}
