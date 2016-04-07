@@ -9,6 +9,7 @@ const TARGET = process.env.npm_lifecycle_event;
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
+  root: __dirname,
   build: path.join(__dirname, 'build')
 };
 
@@ -78,7 +79,8 @@ if(TARGET === 'start' || !TARGET) {
     devtool: 'eval-source-map',   
     
     devServer: {
-      contentBase: PATHS.app,
+      //contentBase: PATHS.app,
+      contentBase: PATHS.root,
       
       // Enable history API fallback so HTML5 History API based
       // routing works. This is a good default that will come
