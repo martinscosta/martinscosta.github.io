@@ -1,4 +1,5 @@
 import React from 'react';
+import { LinkContainer } from 'react-router-bootstrap';
 import {Navbar, Nav, NavItem, MenuItem, NavDropdown} from 'react-bootstrap'; 
 
 
@@ -12,7 +13,7 @@ const MainNavBar = () => {
     </Navbar.Header>
     <Nav>
       <NavItem eventKey={1} href="#">React</NavItem>
-      <NavItem eventKey={2} href="#">Angular</NavItem>
+      <LinkContainer to={{ pathname: '/about', query: { bar: 'baz' } }}><NavItem eventKey={2} href="#">About</NavItem></LinkContainer>
       <NavDropdown eventKey={3} title="Outros" id="basic-nav-dropdown">
         <MenuItem eventKey={3.1}>Action</MenuItem>
         <MenuItem eventKey={3.2}>Another action</MenuItem>
