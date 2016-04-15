@@ -116,5 +116,19 @@ if(TARGET === 'start' || !TARGET) {
 }
 
 if(TARGET === 'build') {
-  module.exports = merge(common, {});
+  module.exports = merge(common, {
+  output: {
+    path: PATHS.build,
+    filename: 'bundle.min.js',
+    publicPath: '/static/'
+  },    
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            include: /\.min\.js$/,
+            minimize: true
+        })
+    ]    
+    
+    
+  });
 }
