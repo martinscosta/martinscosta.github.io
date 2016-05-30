@@ -25,7 +25,7 @@ const common = {
   output: {
     path: PATHS.build,
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: 'react/static/'
   },
   module: {
    loaders: [
@@ -121,7 +121,7 @@ if(TARGET === 'build') {
   output: {
     path: PATHS.build,
     filename: 'bundle.min.js',
-    publicPath: '/static/'
+    publicPath: '/react/static/'
   },    
     plugins: [
         new webpack.optimize.DedupePlugin() ,     
