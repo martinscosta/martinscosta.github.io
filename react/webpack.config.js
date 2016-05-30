@@ -124,7 +124,7 @@ if(TARGET === 'build') {
     publicPath: '/static/'
   },    
     plugins: [
-        new webpack.optimize.DedupePlugin()      
+        new webpack.optimize.DedupePlugin() ,     
         new webpack.optimize.UglifyJsPlugin({
             include: /\.min\.js$/,
             minimize: true
