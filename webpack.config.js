@@ -116,6 +116,7 @@ if(TARGET === 'start' || !TARGET) {
 }
 
 if(TARGET === 'build') {
+  devtool: 'cheap-module-source-map',   
   module.exports = merge(common, {
   output: {
     path: PATHS.build,
@@ -123,10 +124,12 @@ if(TARGET === 'build') {
     publicPath: '/static/'
   },    
     plugins: [
+        new webpack.optimize.DedupePlugin()      
         new webpack.optimize.UglifyJsPlugin({
             include: /\.min\.js$/,
             minimize: true
-        })
+        }),
+        
     ]    
     
     
